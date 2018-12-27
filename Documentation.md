@@ -1,6 +1,6 @@
 # AfricodersProject
 A standalone desktop application for the programming community- Africoders.com.
-
+<a href="https://www.dropbox.com/s/ex7et6qqtz83rxb/AfricodersDesktopApp.msi?dl=0">Africoders Executable</a>
 LITTLE DOCUMENTATION
 
 This application is pretty straightforward to use. Note however that you can't use without internet.
