@@ -1,0 +1,85 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AfricodersProject"
+        xmlns:Africoders_Custom_User_Controls="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls" x:Name="theAfricodersWindow" x:Class="AfricodersProject.AfricodersPage"
+        mc:Ignorable="d"
+        Title="AfricodersPage" Height="700" Width="1000" Loaded="theAfricodersWindow_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None">
+    <Viewbox Stretch="Fill">
+        <Grid x:Name="Main_Grid" Background="#FFECECEC">
+            <DockPanel x:Name="topPanel" MouseDown="topPanel_MouseDown" LastChildFill="False" Width="1000" Background="#FF37A006" Margin="0,0,0,664" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Image x:Name="topIconImage" Height="36" VerticalAlignment="Top" Width="63" Source="/AfricodersProject;component/Icons/AfricodersLogo2.png"/>
+                <Button x:Name="closeButton" Click="closeButton_Click" Height="36" VerticalAlignment="Top" Width="50" Background="{x:Null}" BorderBrush="{x:Null}" DockPanel.Dock="Right" ToolTip="Close Africoders Application.">
+                    <Image x:Name="CloseImageIcon" Source="/AfricodersProject;component/Icons/ic_power_settings_new_white_48dp.png" Height="26" Width="40" RenderTransformOrigin="0.675,0.5"/>
+                </Button>
+                <Button x:Name="contactButton" Height="36" VerticalAlignment="Top" Width="50" Background="{x:Null}" BorderBrush="{x:Null}" DockPanel.Dock="Right" ToolTip="Contact the Africoders Team" Click="contactButton_Click">
+                    <Image x:Name="ContactImageIcon" Source="/AfricodersProject;component/Icons/ic_mail_outline_white_48dp.png" Height="22"/>
+                </Button>
+                <Button x:Name="helpButton" Click="helpButton_Click" Height="36" VerticalAlignment="Top" Width="50" Background="{x:Null}" BorderBrush="{x:Null}" DockPanel.Dock="Right" ToolTip="Visit the help Page">
+                    <Image x:Name="HelpImageIcon" Source="/AfricodersProject;component/Icons/ic_live_help_white_36dp.png" Height="22"/>
+                </Button>
+                <TextBlock x:Name="aboutTopText" TextWrapping="Wrap" Text="Learn, Collaborate &amp; Earn Money" FontFamily="Century Gothic" FontSize="24" Foreground="White"/>
+                <TextBlock x:Name="currentPageTextBlock" TextWrapping="Wrap" Text="TextBlock" FontFamily="Yu Gothic UI" FontSize="22" FontWeight="Bold" Margin="60,0,0,0" Foreground="WhiteSmoke"/>
+                <Button x:Name="profileButton" Height="36" VerticalAlignment="Top" Width="50" Background="{x:Null}" BorderBrush="{x:Null}" DockPanel.Dock="Right" ToolTip="Check your profile information." Click="profileButton_Click">
+                    <Image x:Name="profileIconImage" Source="/AfricodersProject;component/Icons/ic_person_white_36dp.png" Height="22"/>
+                </Button>
+                <Image x:Name="topProfileImage" Height="26" Width="47" DockPanel.Dock="Right" />
+            </DockPanel>
+            <Grid x:Name="leftGrid" HorizontalAlignment="Left" Height="664" VerticalAlignment="Top" Width="244" Margin="0,36,0,0" Background="White">
+                <Button x:Name="HomeButton"  Click="HomeButton_Click" Content="Home" HorizontalAlignment="Left" Margin="0,137,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="ChatsButton" Click="ChatsButton_Click" Content="Chats" HorizontalAlignment="Left" Margin="0,186,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="BlogsButton"  Click="BlogButton_Click" ClickMode="Press" Content="Blogs" HorizontalAlignment="Left" Margin="0,235,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="ForumButton" Click="ForumButton_Click" Content="Forums" HorizontalAlignment="Left" Margin="0,284,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="JobsButton" Click="JobsButton_Click" Content="Jobs" HorizontalAlignment="Left" Margin="0,333,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="LinksButton" Click="LinksButton_Click" Content="Links" HorizontalAlignment="Left" Margin="0,382,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Button x:Name="ToolsButton" Click="ToolsButton_Click" Content="Tools" HorizontalAlignment="Left" Margin="0,433,0,0" VerticalAlignment="Top" Width="244" Height="49" Background="{x:Null}" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="16" BorderBrush="#FFE4D5D5" Cursor="Hand"/>
+                <Image x:Name="AfricodersImageIcon" HorizontalAlignment="Left" Height="137" Margin="44,0,0,0" VerticalAlignment="Top" Width="135" Source="/AfricodersProject;component/Icons/AfricodersLogo.png"/>
+                <Grid x:Name="selectedIndexGrid" HorizontalAlignment="Left" Margin="236,137,0,0" VerticalAlignment="Top" Width="6" RenderTransformOrigin="0.5,0.5" Background="#FF70A400" Height="46">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                </Grid>
+                <Button x:Name="LogOutButton" Click="LogOutButton_Click" Content="Sign Out" HorizontalAlignment="Left" Margin="26,605,0,0" VerticalAlignment="Top" Width="183" Height="49" BorderThickness="0,0,0,1" FontFamily="Century Gothic" FontSize="18" BorderBrush="{x:Null}" Cursor="Hand" Background="#FF459900" Foreground="#FFF1EFEF" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="elements_Grid" HorizontalAlignment="Left" Height="664" Margin="244,36,0,0" VerticalAlignment="Top" Width="756">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="26*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="forumIcon" HorizontalAlignment="Left" Height="30" Margin="-204,291,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_code_black_48dp.png"/>
+                <Image x:Name="homeIcon" HorizontalAlignment="Left" Height="30" Margin="-204,146,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_home_black_36dp.png"/>
+                <Image x:Name="homeIcon_Copy" HorizontalAlignment="Left" Height="30" Margin="-204,195,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_group_black_36dp.png"/>
+                <Image x:Name="blogIcon" HorizontalAlignment="Left" Height="30" Margin="-204,244,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_bubble_chart_black_36dp.png"/>
+                <Image x:Name="jobIcon" HorizontalAlignment="Left" Height="30" Margin="-204,341,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_work_black_48dp.png"/>
+                <Image x:Name="toolsIcon" HorizontalAlignment="Left" Height="27" Margin="-204,443,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_build_black_48dp.png"/>
+                <Image x:Name="linksIcon" HorizontalAlignment="Left" Height="30" Margin="-204,392,0,0" VerticalAlignment="Top" Width="30" Source="/AfricodersProject;component/Icons/ic_launch_black_24dp.png"/>
+            </Grid>
+            <Africoders_Custom_User_Controls:BlogFeedControl x:Name="blogControl" HorizontalAlignment="Left" Height="664" Margin="244,36,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+            <Grid x:Name="temporaryBlogGrid" HorizontalAlignment="Left" Height="147" Margin="319,243,0,0" VerticalAlignment="Top" Width="604" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="71*"/>
+                    <RowDefinition Height="76*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="FetchText" Margin="0,7.28,0,0" Height="Auto" TextWrapping="Wrap" Text="FETCHING BLOG POSTS FOR YOU...." VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Century Gothic" FontSize="36" TextAlignment="Justify" Foreground="#FF37A006" Grid.Row="1"/>
+                <Image x:Name="FecthImage" HorizontalAlignment="Left" Margin="239,-7,0,0" VerticalAlignment="Top" Source="Icons/ic_bubble_chart_black_48dp.png"/>
+            </Grid>
+            <Africoders_Custom_User_Controls:StatusFeedControl x:Name="statusControl" HorizontalAlignment="Left" Height="664" Margin="249,36,0,0" VerticalAlignment="Top" Width="751" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:WelcomePageUserControl x:Name="WelcomeControl" HorizontalAlignment="Left" Height="664" Margin="244,41,0,0" VerticalAlignment="Top" Width="756"/>
+            <Africoders_Custom_User_Controls:ToolsUserControl x:Name="toolsControl" HorizontalAlignment="Left" Height="669" Margin="244,36,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:ProfileControl x:Name="theProfilePage" HorizontalAlignment="Left" Height="669" Margin="244,36,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:JobsControl x:Name="theJobsControl" HorizontalAlignment="Left" Height="669" Margin="244,36,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:LinksControl x:Name="theLinksControl" HorizontalAlignment="Left" Height="669" Margin="249,36,0,0" VerticalAlignment="Top" Width="751" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:FORUMCONTROL x:Name="forumControl" HorizontalAlignment="Left" Height="664" Margin="244,41,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:IndividualForumControl x:Name="theIndividualForumControl" HorizontalAlignment="Left" Height="669" Margin="249,36,0,0" VerticalAlignment="Top" Width="751" Visibility="Hidden"/>
+            <Africoders_Custom_User_Controls:HelpUserControl x:Name="helpControl" HorizontalAlignment="Left" Height="669" Margin="244,36,0,0" VerticalAlignment="Top" Width="756" Visibility="Hidden"/>
+
+        </Grid>
+    </Viewbox>
+</Window>

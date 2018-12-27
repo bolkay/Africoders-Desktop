@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="AfricodersProject.Africoders_Custom_User_Controls.ToolsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="664" d:DesignWidth="756" Loaded="UserControl_Loaded">
+    <Grid Background="GhostWhite">
+        <Button x:Name="PdfmakerButton" Click="PdfmakerButton_Click" ToolTip="Convert your Html pages to PDF easily." Content="      Simple PDF Maker" HorizontalAlignment="Left" Margin="249,177,0,0" VerticalAlignment="Top" Width="276" Height="65" Background="#FF54A008" Foreground="White" BorderBrush="{x:Null}" FontFamily="Century Gothic" FontSize="20">
+
+        </Button>
+        <Image x:Name="PDFImage" HorizontalAlignment="Left" Height="65" Cursor="Hand" Margin="249,177,0,0" VerticalAlignment="Top" Width="59" Source="/AfricodersProject;component/Icons/ic_assignment_turned_in_white_48dp.png"/>
+        <Button x:Name="encodingButton" Click="encodingButton_Click" ToolTip="Easily encode strings with this simple tool." Cursor="Hand" Content="     String Encoder" HorizontalAlignment="Left" Margin="249,281,0,0" VerticalAlignment="Top" Width="276" Height="65" Background="#FF54A008" Foreground="White" BorderBrush="{x:Null}" FontFamily="Century Gothic" FontSize="20"/>
+        <Image x:Name="EncoderImage" HorizontalAlignment="Left" Height="65" Margin="249,281,0,0" VerticalAlignment="Top" Width="59" Source="/AfricodersProject;component/Icons/ic_lock_outline_white_48dp.png"/>
+        <TextBlock x:Name="toolsAvailableText" Margin="191,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Tools Currently Available" FontFamily="Century Gothic" FontSize="36" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Background="#FFE4640C"/>
+        <TextBlock x:Name="moreToolsText" HorizontalAlignment="Left" Margin="191,382,0,0" TextWrapping="Wrap" Text="More tools will be added!" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="24" Foreground="#FF6DAC00" TextAlignment="Center" Width="415" FontWeight="Bold" Height="24"/>
+        <Border BorderBrush="#FF739C04" BorderThickness="1" HorizontalAlignment="Left" Height="458" Margin="171,43,0,0" VerticalAlignment="Top" Width="466">
+            <TextBlock x:Name="yearText" TextWrapping="Wrap" Text="TextBlock" Margin="414,437,-1,-3" Foreground="#FFC3250C" FontFamily="Century Gothic" FontSize="18" FontWeight="Bold"/>
+
+        </Border>
+        <Image HorizontalAlignment="Left" Height="28" Margin="550,473,0,0" VerticalAlignment="Top" Width="26" Source="/AfricodersProject;component/Icons/AfricodersFavicon.ico"/>
+    </Grid>
+</UserControl>

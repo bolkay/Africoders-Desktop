@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="AfricodersProject.Africoders_Custom_User_Controls.SinglePostControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ForLB">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <!--Profile Image Avatar-->
+                    <Image/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <StackPanel Orientation="Horizontal">
+                        <!--Username-->
+                        <TextBlock Text="Username "/>
+                        <TextBlock Margin="3,0,0,0" Text="Shared"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Title of the status will appear here."/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1">
+                    <TextBlock Text="Date of the status will appear here."/>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="2">
+                    <TextBlock Text="Body of the status will appear here."/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="likes"/>
+                    <TextBlock Text="dislikes"/>
+                    <TextBlock Text="shares"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <ListBox x:Name="TheLB" ItemTemplate="{DynamicResource ForLB}" HorizontalAlignment="Stretch"  VerticalAlignment="Top" HorizontalContentAlignment="Stretch"/>
+
+    </Grid>
+</UserControl>

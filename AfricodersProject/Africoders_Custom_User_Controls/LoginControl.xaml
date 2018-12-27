@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="AfricodersProject.Africoders_Custom_User_Controls.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <Style x:Key="ForTextBlocks" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Reslish Pro 7"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="DarkGreen"/>
+            <Setter Property="FontStretch" Value="Normal"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        <Style x:Key="ForTextBoxes" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="ForestGreen"/>
+        </Style>
+        <Style x:Key="ForButtons" TargetType="Button">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="DarkGreen"/>
+            <Setter Property="BorderBrush" Value="DarkSeaGreen"/>
+            <Setter Property="FontFamily" Value="Relish Pro 7"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid x:Name="Main_Login_Grid" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="400" Background="#FFECECEC">
+            <TextBlock Name="LoginNameTextBlock" Style="{DynamicResource ForTextBlocks}" HorizontalAlignment="Left" Margin="14,27,0,0" TextWrapping="Wrap" Text="Username: " VerticalAlignment="Top" Height="29" Width="133" FontFamily="Century Gothic"/>
+            <TextBox x:Name="LoginNameTextBox"  Style="{DynamicResource ForTextBoxes}" HorizontalAlignment="Left" Height="28" Margin="152,28,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221" BorderBrush="#FF2A7C04" Foreground="#FF015113" FontFamily="Century Gothic"/>
+            <TextBlock x:Name="LoginPassTextBlock" Style="{DynamicResource ForTextBlocks}" HorizontalAlignment="Left" Margin="14,124,0,0" TextWrapping="Wrap" Text="Password: " VerticalAlignment="Top" Height="29" Width="133" FontFamily="Century Gothic"/>
+            <TextBox x:Name="LoginPassTextBox"  Style="{DynamicResource ForTextBoxes}" HorizontalAlignment="Left" Height="28" Margin="152,125,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221" BorderBrush="#FF2A7C04" Foreground="#FF015113" FontFamily="Century Gothic"/>
+            <TextBlock x:Name="logginText" HorizontalAlignment="Left" Margin="14,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="301" FontWeight="Bold" Foreground="#FF299700"/>
+
+            <Button x:Name="LoginButton" Content="Login" Style="{DynamicResource ForButtons}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Height="55" Click="LoginButton_Click" FontFamily="Century Gothic" Margin="89,231,0,0"/>
+
+            <TextBlock Name="InstructionText1" HorizontalAlignment="Left" Margin="14,69,0,0" TextWrapping="Wrap" Text="This is the username you have registered with Africoders.com, either throught the main website or through this application." VerticalAlignment="Top" Height="46" Width="376" FontFamily="Century Gothic" TextTrimming="CharacterEllipsis" TextAlignment="Justify" Foreground="#FF3AA00B"/>
+            <TextBlock x:Name="InstructionText2" HorizontalAlignment="Left" Margin="14,164,0,0" TextWrapping="Wrap" Text="Carefully enter your registered password. You won't be able to login without providing the correct password." VerticalAlignment="Top" Height="46" Width="376" FontFamily="Century Gothic" TextTrimming="CharacterEllipsis" TextAlignment="Justify" Foreground="#FF3AA00B"/>
+            <RadioButton x:Name="lastRecordButton" Checked="lastRecordButton_Checked" Content="Use Last Record?" HorizontalAlignment="Left" Margin="273,255,0,0" VerticalAlignment="Top" Width="117" FontFamily="Century Gothic" FontWeight="Bold" BorderBrush="#FF4DA206" Foreground="#FF8D9728"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

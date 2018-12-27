@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="AfricodersProject.Africoders_Custom_User_Controls.FORUMCONTROL"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="664" d:DesignWidth="756">
+    <UserControl.Resources>
+        <!--Template style for Categories-->
+        <Style x:Key="ForLabels" TargetType="Label">
+            <Setter Property="Background" Value="LightSeaGreen"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="FontFamily" Value="Relish Pro 4"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="FontStretch" Value="Medium"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+
+        <!--TextBlockTitles-->
+        <Style x:Key="ForTextBlocksTitles" TargetType="TextBlock">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Foreground" Value="YellowGreen"/>
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontStretch" Value="SemiExpanded"/>
+        </Style>
+
+        <Style x:Key="ForUserNames" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Corbel"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="Crimson"/>
+            <Setter Property="FontStretch" Value="Expanded"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="ToolTip" Value="{Binding user.name}"/>
+            <Style.Triggers>
+
+            </Style.Triggers>
+        </Style>
+        <!--For General ListBox Display-->
+        <DataTemplate x:Key="ForListBoxes">
+
+            <!--Parent Grd-->
+            <Grid Background="#FFFDFDFD">
+                <!--Definitions-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="Green">
+                    <StackPanel Grid.Column="0" Grid.Row="0" Background="GhostWhite" VerticalAlignment="Stretch" >
+                        <!--Dummy Avatar-->
+
+                        <TextBlock Text="" HorizontalAlignment="Center"/>
+                        <Image Height="20" Width="20" HorizontalAlignment="Center" Source="/AfricodersProject;component/Icons/ic_visibility_black_36dp.png"/>
+                        <TextBlock Style="{StaticResource ForUserNames}" Foreground="Chocolate" Text="{Binding views}" HorizontalAlignment="Center"/>
+                        <TextBlock Style="{StaticResource ForUserNames}" Foreground="Chocolate" Text="Views" HorizontalAlignment="Center"/>
+
+                    </StackPanel>
+                </Border>
+                <!--Details Column-->
+                <StackPanel Grid.Column="1" Grid.Row="0" Margin="5,0,0,0">
+                    <!--Body/Title of the particular post-->
+                    <TextBlock Style="{DynamicResource ForTextBlocksTitles}" Text="{Binding board}" MaxWidth="600" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Latest: "/>
+                        <TextBlock Text="{Binding latest}" Style="{DynamicResource ForTextBlocksTitles}" FontWeight="Black" FontSize="12"  Foreground="Black" MaxWidth="600" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+
+                    </StackPanel>
+                    <!--Threads-->
+                    <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource ForUserNames}"  Text="Threads: "/>
+                        <TextBlock Style="{StaticResource ForUserNames}" Text="{Binding threads}"/>
+                        <TextBlock Text="   "/>
+                        <TextBlock Style="{StaticResource ForUserNames}" Foreground="Chocolate"  Text="Replies: "/>
+                        <TextBlock Style="{StaticResource ForUserNames}" Foreground="Chocolate" Text="{Binding comments}"/>
+                        <TextBlock Text="   "/>
+                        <!--Open Forum Button-->
+                        <Button x:Name="OpenButton" Height="Auto"  Click="OpenButton_Click" Width="Auto" ToolTip="Open forum" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF8EAE74" FontFamily="Century Gothic" FontWeight="Bold" Margin="5,0,0,0">
+                            Go to Forum.
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <ScrollViewer>
+    <Grid>
+        <StackPanel>
+                <TextBlock Margin="10,5,10,0" Text="General" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+            <ListBox x:Name="TheGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,5,10,0" Text="Web Design" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+
+            <ListBox x:Name="WebGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,5,10,0" Text="Mobile" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+            <ListBox x:Name="MobileGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,5,10,0" Text="App Development" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+             <ListBox x:Name="AppGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,5,10,0" Text="Database" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+                <ListBox x:Name="DatabaseGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,5,10,0" Text="Community Development" FontFamily="Century Gothic" Foreground="White" FontSize="15" FontWeight="Bold" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" Background="#FF37A006" />
+                <ListBox x:Name="CommunityGeneralForumListBox" ItemTemplate="{StaticResource ForListBoxes}" HorizontalContentAlignment="Stretch"  Margin="10,10,10,0" VerticalAlignment="Top"/>
+
+            </StackPanel>
+    </Grid>
+    </ScrollViewer>
+</UserControl>

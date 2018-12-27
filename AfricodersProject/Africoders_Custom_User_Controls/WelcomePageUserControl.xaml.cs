@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AfricodersProject
+namespace AfricodersProject.Africoders_Custom_User_Controls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WelcomePageUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WelcomePageUserControl : UserControl
     {
-        public MainWindow()
+        public WelcomePageUserControl()
         {
             InitializeComponent();
         }

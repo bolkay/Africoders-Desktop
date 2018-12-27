@@ -1,0 +1,29 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AfricodersProject"
+        xmlns:Africoders_Custom_User_Controls="clr-namespace:AfricodersProject.Africoders_Custom_User_Controls" x:Name="MainRegLogWindow" x:Class="AfricodersProject.MainWindow"
+        mc:Ignorable="d"
+        Title="Register/Login to Africoders" Loaded="MainRegLogWindow_Loaded" Height="450" Width="500" AllowsTransparency="True" WindowStyle="None">
+    <Grid x:Name="Main_Grid" Background="#FFECECEC">
+        <DockPanel x:Name="topDockPanel" Height="49" LastChildFill="False" VerticalAlignment="Bottom" Background="#FF37A006" Margin="0,-2,0,403">
+            <Image x:Name="topIconImage" Height="53" VerticalAlignment="Top" Width="100" Source="/AfricodersProject;component/Icons/AfricodersLogo2.png"/>
+            <TextBlock x:Name="TopTitleText" Height="28" TextWrapping="Wrap" Text="Register/Login to Africoders.com" VerticalAlignment="Top" Foreground="White" FontFamily="Century Gothic" FontSize="20" Margin="0,10,0,0" FontWeight="Bold"/>
+            <Button x:Name="CloseButton" ToolTip="Close Africoders Application." Content="Close" Height="49" VerticalAlignment="Top" Width="75" DockPanel.Dock="Right" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="CloseButton_Click" FontFamily="Century Gothic"/>
+        </DockPanel>
+
+        <Africoders_Custom_User_Controls:LoginControl x:Name="LoginControl" HorizontalAlignment="Left" Height="290" Margin="42,94,0,0" VerticalAlignment="Top" Width="424"/>
+        <DockPanel x:Name="bottomDockPanel" HorizontalAlignment="Left" Height="42" LastChildFill="False" Margin="0,408,0,0" VerticalAlignment="Top" Width="500">
+            <Image x:Name="bottomIconImage" Height="42" VerticalAlignment="Top" Width="56" Source="/AfricodersProject;component/Icons/AfricodersFavicon.ico"/>
+            <TextBlock x:Name="BottomTitleText" Height="28" TextWrapping="Wrap" Text="Africoders Desktop Client" VerticalAlignment="Top" Foreground="Green" FontFamily="Century Gothic" Margin="0,12,0,0" Width="422" FontWeight="Bold"/>
+        </DockPanel>
+        <Button x:Name="regPageButton" Content="Sign up for an Africoders Account" HorizontalAlignment="Left" Margin="42,52,0,0" VerticalAlignment="Top" Width="313" Height="42" Background="{x:Null}" BorderBrush="#FF37A006" FontFamily="Century Gothic" FontSize="16" Foreground="#FF6B7C00" Click="regPageButton_Click" FontWeight="Bold"/>
+        <Border BorderBrush="#FF37A006" BorderThickness="0.5" HorizontalAlignment="Left" Height="270" Margin="42,114,0,0" VerticalAlignment="Top" Width="424">
+            <Africoders_Custom_User_Controls:RegisterationControl x:Name="RegControl" Margin="0,0,-1,9" Visibility="Hidden"/>
+        </Border>
+        <Button x:Name="LoginPageButton" Click="LoginPageButton_Click" Content="Go back to the Login Page" HorizontalAlignment="Left" Margin="42,52,0,0" VerticalAlignment="Top" Width="313" Height="42" Background="{x:Null}" BorderBrush="#FF37A006" FontFamily="RelishPro 2" FontSize="18" Foreground="#FF6B7C00" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
