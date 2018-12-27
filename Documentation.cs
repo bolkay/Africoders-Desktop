@@ -1,7 +1,7 @@
 # AfricodersProject
 A standalone desktop application for the programming community- Africoders.com.
 
-DOCUMENTATION
+LITTLE DOCUMENTATION
 
 This application is pretty straightforward to use. Note however that you can't use without internet.
 
