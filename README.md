@@ -1,5 +1,6 @@
 # AfricodersProject
 A standalone desktop application for the programming community- Africoders.com.
+
 DOCUMENTATION
 This application is pretty straightforward to use. Note however that you can't use without internet.
 
@@ -29,10 +30,14 @@ Hmm. I personally love this section. I enjoyed myself while developing the tools
 This tool can help you convert an html file into PDF. Depending on the size of the html file, this can be an intensive process. However, it generates good results.
 
 	B.	The String Encoder - A simple tool to easily encode you string using either SHA1 or MD5. String decoder option will be added in the future.
+	
 PACKAGES
-These commands will automatically install the latest version.
+
+These commands will automatically install the latest version of the required nuget packages.
+
 Netwonsoft.Json
 Nuget: Install-Package Newtonsoft.Json
+
 IronPdf
 Nuget: Install-Package IronPdf -Version 4.4.9
 
