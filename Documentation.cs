@@ -1,6 +1,8 @@
 # AfricodersProject
 A standalone desktop application for the programming community- Africoders.com.
 
+DOCUMENTATION
+
 This application is pretty straightforward to use. Note however that you can't use without internet.
 
 The Africoders Desktop Application has distinct sections. This is the first version of the application, therefore, all sections are subject to improvements, redesign or complete redevelopment, if necessary. Following are the different sections of the application:
