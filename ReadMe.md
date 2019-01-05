@@ -5,4 +5,4 @@ Please go to [Africoders Desktop Wiki](https://bitbucket.org/bolkay/africodersde
 the executable file and also the important documentation.
 
 I updated the profile page to reflect the date on which the user created his or her account (measured in days)and the last time a
-user updated his account.
+user updated his account. Please go to wiki to view the changes.
